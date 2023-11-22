@@ -1,6 +1,9 @@
 {
   "rewrites": [
-      { "source": "/api:path(.*)", "destination": "https://api-ll-assistant.onrender.com/:path" },
-      { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/:path(.*)",
+      "destination": "https://api-ll-assistant.onrender.com/:path"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

@@ -30,16 +30,20 @@ export const Messages = ({ isAssistantLoading, userLastMessage }) => {
       )}
       {userLastMessage && (
         <div
-          className={`reative p-6 ml-auto rounded-lg my-10 bg-[#4d4d4d] w-max max-w-[calc(100%_-_100px)] user`}
+          className={`user ml-auto relative p-6 rounded-lg my-10 bg-[#4d4d4d] w-max max-w-[calc(100%_-_100px)]`}
         >
           {userLastMessage}
         </div>
       )}
       {isAssistantLoading && (
         <div
-          className={`p-6 rounded-lg my-10 bg-[#4d4d4d] w-max max-w-[calc(100%_-_100px)] assistant relative`}
+          className={`px-10 py-6 rounded-lg my-10 bg-[#4d4d4d] w-max max-w-[calc(100%_-_100px)] assistant relative flex gap-x-7 items-center`}
         >
-          fetching message...
+          <span className="snippet" data-title="dot-falling">
+            <div className="stage">
+              <div className="dot-falling"></div>
+            </div>
+          </span>
         </div>
       )}
     </div>

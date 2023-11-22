@@ -70,22 +70,24 @@ export const UserInput = ({
     }
   };
   return (
-    <div className="fixed bottom-0 pb-[40px]  max-w-[1400px] w-full bg-[#242424]">
-      <form onSubmit={submitHandler} ref={formRef}>
-        <input
-          type="text"
-          className="w-full h-[60px] text-xl bg-[#4d4d4d] focus:outline-none px-3 rounded-lg"
-          placeholder="Message here..."
-          ref={messageRef}
-          onChange={(e) => setMessageText(e.target.value)}
-        />
-        <button
-          className="absolute right-3 bottom-[50%] line bg-[#242424] p-2 rounded-md leading-none disabled:opacity-50"
-          disabled={!messageText || isMessageLoading || isAssistantLoading}
-        >
-          Send
-        </button>
-      </form>
+    <div className="fixed bottom-0 mx-[-10px] z-10 max-w-[1400px] w-full bg-[#242424]">
+      <div className="mb-[40px]  bg-[#242424]">
+        <form onSubmit={submitHandler} ref={formRef} className="relative">
+          <input
+            type="text"
+            className="w-full h-[70px] text-xl bg-[#4d4d4d] focus:outline-none px-5 rounded-lg"
+            placeholder="Message here..."
+            ref={messageRef}
+            onChange={(e) => setMessageText(e.target.value)}
+          />
+          <button
+            className="absolute right-5 top-[50%] translate-y-[-50%] bg-[#242424] py-2 px-4 rounded-md leading-none disabled:opacity-50"
+            disabled={!messageText || isMessageLoading || isAssistantLoading}
+          >
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

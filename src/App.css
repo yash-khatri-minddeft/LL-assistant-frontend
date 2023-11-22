@@ -1,0 +1,25 @@
+.user::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #4d4d4d;
+  transform: rotate(0deg);
+}
+.assistant::after {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10px 10px 10px 0px;
+  border-color: transparent #4d4d4d transparent transparent;
+  transform: rotate(0deg);
+  z-index: 1;
+}

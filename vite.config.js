@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         "/api": {
-          target: "https://api-ll-assistant.onrender.com/",
+          target: "https://weak-red-seagull-sari.cyclic.app/",
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
